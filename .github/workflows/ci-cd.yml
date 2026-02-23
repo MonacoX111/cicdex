@@ -1,0 +1,18 @@
+name: CI-CD-Lab2
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run CI script
+        run: |
+          echo "Початок процесу CI для студента: Станіслав Бандура"
+          echo "Поточна дата: $(date)"
+          echo "Перевірка файлів у репозиторії:"
+          ls -la
