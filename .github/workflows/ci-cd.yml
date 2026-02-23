@@ -1,18 +1,20 @@
-name: CI-CD-Lab2
+name: PowerShell-CI-Automation
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Run CI script
+      - name: Student Info
         run: |
-          echo "РџРѕС‡Р°С‚РѕРє РїСЂРѕС†РµСЃСѓ CI РґР»СЏ СЃС‚СѓРґРµРЅС‚Р°: РЎС‚Р°РЅС–СЃР»Р°РІ Р‘Р°РЅРґСѓСЂР°"
-          echo "РџРѕС‚РѕС‡РЅР° РґР°С‚Р°: $(date)"
-          echo "РџРµСЂРµРІС–СЂРєР° С„Р°Р№Р»С–РІ Сѓ СЂРµРїРѕР·РёС‚РѕСЂС–С—:"
-          ls -la
+          echo "Лабораторна робота №2"
+          echo "Студент: Станіслав Бандура"
+          echo "Виконано через PowerShell"
+
+      - name: List Files
+        run: ls -R
