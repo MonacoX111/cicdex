@@ -1,20 +1,14 @@
-name: PowerShell-CI-Automation
+name: Final-Lab2-Check
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
 
 jobs:
-  test_and_deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Student Info
+      - uses: actions/checkout@v3
+      - name: Report
         run: |
-          echo "Лабораторна робота №2"
+          echo "Лабораторна 2: Перевірка завершена"
           echo "Студент: Станіслав Бандура"
-          echo "Виконано через PowerShell"
-
-      - name: List Files
-        run: ls -R
